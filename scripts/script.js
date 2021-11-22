@@ -2,6 +2,10 @@ let data = {
   title: "App title"
 }
 
+Vue.component('hello', {
+  template: '<h1>Hello world !!!</h1>'
+});
+
 let vm1 = new Vue({
   data: data  
 });
