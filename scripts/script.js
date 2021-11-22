@@ -1,22 +1,30 @@
-let data = {
-  title: "App title"
-}
-
-Vue.component('hello', {
-  template: '<h1>Hello world !!!</h1>'
+new Vue({
+  el: "app",
+  data: {
+    title: "The Vuejs instance"
+  },
+  beforeCreate: function () {
+    console.log('beforeCreate()')
+  },
+  created: function () {
+    console.log('created()')
+  },
+  beforeMount: function () {
+    console.log('beforeMount()')
+  },
+  mounted: function () {
+    console.log('mounted()')
+  },
+  beforeUpdate: function () {
+    console.log('beforeUpdate()')
+  },
+  updated: function () {
+    console.log('updated()')
+  },
+  beforeDestroy: function () {
+    console.log('beforDestroy()')
+  },
+  destroyed: function () {
+    console.log('destroyed()')
+  },
 });
-
-let vm1 = new Vue({
-  data: data  
-});
-
-vm1.$mount("#app1");
-
-
-let vm2 = new Vue({});
-
-let vm3 = new Vue({
-  template: '<h1>Assalamu alaykum!</h1>'
-});
-
-vm3.$mount('#app2');
