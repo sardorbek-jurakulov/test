@@ -1,5 +1,5 @@
 new Vue({
-  el: "app",
+  el: "#app",
   data: {
     title: "The Vuejs instance"
   },
@@ -27,4 +27,9 @@ new Vue({
   destroyed: function () {
     console.log('destroyed()')
   },
+  methods: {
+    destroy: function () {
+      this.$destroy();
+    }
+  }
 });
