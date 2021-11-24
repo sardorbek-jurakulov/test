@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="utf-8">
     <title>Vue Components</title>
@@ -11,3 +12,21 @@
     <script src="/dist/build.js"></script>
   </body>
 </html>
+=======
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mounting a Template</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ title }}</h1>
+    <input type="text" v-model="title">
+    <button @click="title = 'Changed'">Update Title</button>
+    <button @click="destroy">Destroy</button>
+  </div>  <script src="./scripts/script.js"></script>
+</body>
+</html>
+>>>>>>> f5ce08361bfe981191dd005640709cc554148e1e
