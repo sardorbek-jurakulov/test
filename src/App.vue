@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import ServerStatusControllers from "./ServerStatusControllers.vue";
-import ServerDetailes from './ServerDetailes.vue';
+import ServerStatusControllers from "./components/ServerStatusControllers.vue";
+import ServerDetailes from './components/ServerDetailes.vue';
 export default {
   components: {
     'app-server-status-controllers': ServerStatusControllers,
