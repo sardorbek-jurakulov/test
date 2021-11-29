@@ -8,8 +8,14 @@
   export default {
     data: function () {
       return {
-        serverStatusDetail: 'Server Details are currently not updated'
+        serverStatusDetail: 'Server Details are currently not updated',
       }
     }
   }
 </script>
+
+<style scoped>
+  div {
+    border: 1px solid red;
+  }
+</style>

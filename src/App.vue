@@ -4,7 +4,7 @@
         <hr>
         <div class="row">
             <app-server-status-controllers></app-server-status-controllers>
-            <appServerDetailes></appServerDetailes>
+            <app-server-detailes></app-server-detailes>
         </div>
         <hr>
         <app-footer></app-footer>
@@ -17,7 +17,7 @@ import ServerDetailes from './components/Server/ServerDetailes.vue';
 export default {
   components: {
     'app-server-status-controllers': ServerStatusControllers,
-    appServerDetailes: ServerDetailes
+    'app-server-detailes': ServerDetailes
   }
 }
 </script>
