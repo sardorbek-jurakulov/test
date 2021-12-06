@@ -6,7 +6,7 @@
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <app-user-detail></app-user-detail>
+                <app-user-detail :myName="name"></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit></app-user-edit>
@@ -22,12 +22,12 @@
     export default {
         data: function () {
           return {
-            name: 'Sardor',
+            name: 'GitHub',
           };
         },
         methods: {
           changeName () {
-            this.name = 'Malika';
+            this.name = 'GitLab';
           } 
         },
         components: {
