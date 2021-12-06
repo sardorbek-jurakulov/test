@@ -3,23 +3,41 @@
         <h3>You may view the User Details here</h3>
         <p>Many Details</p>
         <p>User Name: {{ myName }}</p>
+        <p>User Age: {{ userAge }}</p>
+        <button @click="resetName">Reset Name</button>
+        <button @click="resetFn()">Reset Name</button>
     </div>
 </template>
 
 <script>
-  export default {
-    props: {
-      myName: {
-        type: String,
-        default: 'Bitbucket'
-      }
+import { eventBus } from '../main';
+export default {
+  props: {
+    myName: {
+      type: String,
+      default: 'Bitbucket'
     },
-    methods: {
-      switchName () {
-        return this.myName.split("").reverse().join("");
-      }
+    resetFn: Function,
+    userAge: {
+      type: Number,
+      default: 0
+    } 
+  },
+  methods: {
+    switchName () {
+      return this.myName.split("").reverse().join("");
+    },
+    resetName () {
+      this.$emit('newEmitElement', 'Vuejs');
+      this.$emit('nameWasReset', this.myName);
+    },
+    created () {
+      eventBus.$on('ageWasEdited', (age) => {
+        this.userAge = age;
+      });
     }
   }
+}
 </script>
 
 <style scoped>
