@@ -13,8 +13,19 @@
                     Blue is one of the three primary colours of pigments in painting, drawing (art) and traditional colour theory, as well as in the RGB colour model. It lies between purple and green on the spectrum of visible light. The eye perceives blue when observing light with a dominant wavelength between approximately 450 and 495 nanometres. Most blues contain a slight mixture of other colours; azure contains some green, while ultramarine contains some violet. The clear daytime sky and the deep sea appear blue because of an optical effect known as Rayleigh scattering. An optical effect called Tyndall effect explains blue eyes. Distant objects appear more blue because of another optical effect called aerial perspective.
                   </p>
                   <div class="usefulness-section-wrapper">
-                    <button slot="blueComponentUsefulnessButton" class="blue-component-usefulness-increaser">was helpful to me</button>
-                    <span slot="blueComponentUsefulnessAmount" class="blue-component-usefulness-amount">{{ blueUsefulnessAmount }}</span>
+                    <button 
+                      @click="usefulnessAmountIncreaser('blue')" 
+                      slot="blueComponentUsefulnessButton" 
+                      class="blue-component-usefulness-increaser"
+                    >
+                      was helpful to me
+                    </button>
+                    <span 
+                      slot="blueComponentUsefulnessAmount" 
+                      class="blue-component-usefulness-amount"
+                    >
+                      {{ blueUsefulnessAmount }}
+                    </span>
                   </div>
                 </app-blue>
                 <app-green>
@@ -22,8 +33,19 @@
                   <p>
                     Green is the color between blue and yellow on the visible spectrum. It is evoked by light which has a dominant wavelength of roughly 495–570 nm. In subtractive color systems, used in painting and color printing, it is created by a combination of yellow and cyan; in the RGB color model, used on television and computer screens, it is one of the additive primary colors, along with red and blue, which are mixed in different combinations to create all other colors. By far the largest contributor to green in nature is chlorophyll, the chemical by which plants photosynthesize and convert sunlight into chemical energy. Many creatures have adapted to their green environments by taking on a green hue themselves as camouflage. Several minerals have a green color, including the emerald, which is colored green by its chromium content.
                   </p>
-                  <button>was helpful to me</button>
-                  <span>{{ greenUsefulnessAmount }}</span>
+                  <div class="usefulness-section-wrapper">
+                    <button
+                      @click="usefulnessAmountIncreaser('green')" 
+                      slot="greenComponentUsefulnessButton" 
+                      class="green-component-usefulness-increaser"
+                    >was helpful to me</button>
+                    <span
+                      slot="greenComponentUsefulnessAmount" 
+                      class="green-component-usefulness-amount"
+                    >
+                      {{ greenUsefulnessAmount }}
+                    </span>
+                  </div>
                 </app-green>
                 <app-red>
                   <h2>Welcome to red element</h2>
@@ -55,6 +77,21 @@ export default {
       appBlue: Blue,
       appGreen: Green,
       appRed: Red
+  },
+  methods: {
+    usefulnessAmountIncreaser(componentColor) {
+      switch(componentColor) {
+        case 'blue':
+          this.blueUsefulnessAmount++;
+          break;
+        case 'green':
+          this.greenUsefulnessAmount++;
+          break;
+        case 'red':
+          this.redUsefulnessAmount++;
+          break;
+      }
+    }
   }
 }
 </script>
@@ -64,5 +101,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
 }
 </style>
