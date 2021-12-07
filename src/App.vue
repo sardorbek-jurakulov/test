@@ -17,15 +17,11 @@
                       @click="usefulnessAmountIncreaser('blue')" 
                       slot="blueComponentUsefulnessButton" 
                       class="blue-component-usefulness-increaser"
-                    >
-                      was helpful to me
-                    </button>
+                    >was helpful to me</button>
                     <span 
                       slot="blueComponentUsefulnessAmount" 
                       class="blue-component-usefulness-amount"
-                    >
-                      {{ blueUsefulnessAmount }}
-                    </span>
+                    >{{ blueUsefulnessAmount }}</span>
                   </div>
                 </app-blue>
                 <app-green>
@@ -42,9 +38,7 @@
                     <span
                       slot="greenComponentUsefulnessAmount" 
                       class="green-component-usefulness-amount"
-                    >
-                      {{ greenUsefulnessAmount }}
-                    </span>
+                    >{{ greenUsefulnessAmount }}</span>
                   </div>
                 </app-green>
                 <app-red>
@@ -52,8 +46,17 @@
                   <p>
                     Red is the color at the long wavelength end of the visible spectrum of light, next to orange and opposite violet. It has a dominant wavelength of approximately 625–740 nanometres.[1] It is a primary color in the RGB color model and a secondary color (made from magenta and yellow) in the CMYK color model, and is the complementary color of cyan. Reds range from the brilliant yellow-tinged scarlet and vermillion to bluish-red crimson, and vary in shade from the pale red pink to the dark red burgundy.
                   </p>
-                  <button>was helpful to me</button>
-                  <span>{{ redUsefulnessAmount }}</span>
+                  <div class="usefulness-section-wrapper">
+                    <button
+                      @click="usefulnessAmountIncreaser('red')" 
+                      slot="redComponentUsefulnessButton" 
+                      class="red-component-usefulness-increaser"
+                    >was helpful to me</button>
+                    <span
+                      slot="redComponentUsefulnessAmount" 
+                      class="red-component-usefulness-amount"
+                    >{{ redUsefulnessAmount }}</span>
+                  </div>
                 </app-red>
             </div>
         </div>

@@ -18,6 +18,8 @@
     margin: 20px auto;
     text-align: center;
     color: #222;
+    border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 .green-component-usefulness-increaser {
