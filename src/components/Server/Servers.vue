@@ -22,8 +22,8 @@ export default {
   },
   methods: {
     elementSelector(env) {
-      this.selectedElementId = env.target.value;
-      console.log(this.selectedElementId);
+      this.selectedElementId = env.target.innerHTML.split("#")[1] - 0;
+      this.$emit('selectedElementIdHaveChanged', this.selectedElementId)
     }
   }
 }

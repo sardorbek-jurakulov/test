@@ -3,8 +3,14 @@
         <app-header></app-header>
         <hr>
         <div class="row">
-            <servers :servers="servers" :selectedElementId="selectedElementId"></servers>
-            <app-server-details></app-server-details>
+            <servers 
+              :servers="servers" 
+              :selectedElementId="selectedElementId"
+              @selectedElementIdHaveChanged="selectedElementId = $event"
+            ></servers>
+            <app-server-details
+              :selectedTechnology="selectedTechnology"
+            ></app-server-details>
         </div>
         <hr>
         <app-footer></app-footer>
@@ -32,7 +38,13 @@ export default {
         {id: 9, technology: "C#"},
         {id: 10, technology: "Ruby"},
       ],
-      selectedElementId: null
+      selectedElementId: 0,
+      selectedTechnology: '',
+    }
+  },
+  watch: {
+    selectedElementId() {
+      this.selectedTechnology = this.selectedTechnologyNameFinder(this.selectedElementId)
     }
   },
   components: {
@@ -40,7 +52,17 @@ export default {
       Servers,
       'app-server-details': ServerDetails,
       'app-footer': Footer
-  }
+  },
+  methods: {
+    selectedTechnologyNameFinder(technologyId) {
+      for(let i = 0; i < this.servers.length; i++) {
+        if(this.servers[i].id === technologyId) {
+          return this.servers[i].technology;
+        }
+      }
+      return '';
+    }
+  },
 }
 </script>
 
