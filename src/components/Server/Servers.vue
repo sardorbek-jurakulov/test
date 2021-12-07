@@ -1,7 +1,14 @@
 <template>
     <div class="col-xs-12 col-sm-6">
         <ul class="list-group">
-            <li @click="elementSelector" class="list-group-item" v-for="index in servers" :key="index.id">
+            <li 
+              @click="elementSelector" 
+              class="list-group-item" 
+              v-for="index in servers" 
+              :key="index.id" 
+              style="cursor:pointer;" 
+              onMouseOver="this.style.backgroundColor='#cfd'"
+              onMouseOut="this.style.backgroundColor='#fff'">
                 Server #{{ index.id }}
             </li>
         </ul>
