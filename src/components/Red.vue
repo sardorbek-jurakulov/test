@@ -10,20 +10,29 @@
     </p>
     <div class="usefulness-section-wrapper">
       <button
-        @click="usefulnessAmountIncreaser('red')" 
-        slot="redComponentUsefulnessButton" 
-        class="red-component-usefulness-increaser"
+        @click="usefulnessAmountIncreaser" 
+        class="usefulness-increaser"
       >was helpful to me</button>
       <span
-        slot="redComponentUsefulnessAmount" 
-        class="red-component-usefulness-amount"
-      >{{ redUsefulnessAmount }}</span>
+        class="usefulness-amount"
+      >{{ usefulnessAmount }}</span>
     </div>
   </div>
 </template>
 
 <script>
-
+export default {
+  data() {
+    return {
+      usefulnessAmount: 0,
+    }
+  },
+  methods: {
+    usefulnessAmountIncreaser() {
+      this.usefulnessAmount++;
+    }
+  }
+}
 </script>
 
 <style scoped>
