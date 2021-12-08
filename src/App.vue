@@ -75,9 +75,9 @@ export default {
   data() {
     return {
       selectedComponent: 'appBlue',
-      blueUsefulnessAmount: 0,
-      greenUsefulnessAmount: 0,
-      redUsefulnessAmount: 0,
+      // blueUsefulnessAmount: 0,
+      // greenUsefulnessAmount: 0,
+      // redUsefulnessAmount: 0,
     }
   },
   components: {
@@ -86,7 +86,7 @@ export default {
       appRed: Red
   },
   methods: {
-    usefulnessAmountIncreaser(componentColor) {
+    /*usefulnessAmountIncreaser(componentColor) {
       switch(componentColor) {
         case 'blue':
           this.blueUsefulnessAmount++;
@@ -98,7 +98,7 @@ export default {
           this.redUsefulnessAmount++;
           break;
       }
-    }
+    }*/
   }
 }
 </script>
