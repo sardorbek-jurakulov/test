@@ -75,6 +75,7 @@ export default {
   data() {
     return {
       selectedComponent: 'appBlue',
+      usefulnessAmount: 0,
       // blueUsefulnessAmount: 0,
       // greenUsefulnessAmount: 0,
       // redUsefulnessAmount: 0,
